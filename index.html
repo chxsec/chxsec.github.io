@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyfall.htb</title>
+</head>
+<body>
+    <div id="content-container"></div>
+
+    <script>
+        // Fetch HTML file and insert its content into the div
+        fetch('https://chxsec.github.io/Skyfall_HTB.html')
+            .then(response => response.text())
+            .then(html => {
+                const contentContainer = document.getElementById('content-container');
+                contentContainer.innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error fetching HTML content:', error);
+            });
+    </script>
+</body>
+</html>
