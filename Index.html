@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div id="markdown-content"></div>
+
+    <script>
+        // Fetch Markdown file and render it as HTML
+        fetch('your-markdown-file.md')
+            .then(response => response.text())
+            .then(text => {
+                const markdownContent = document.getElementById('markdown-content');
+                markdownContent.innerHTML = marked(text);
+            });
+    </script>
+</body>
+</html>
